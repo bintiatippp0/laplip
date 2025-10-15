@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initContactAnimations();
     initTypingEffect();
 });
+
 //Mobile Navigation
 function initMobileNavigation() {
     const hamburger = document.querySelector('.hamburger');
