@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initTypingEffect();
 });
 
-//Mobile Navigation
+// Mobile Navigation
 function initMobileNavigation() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
@@ -391,71 +391,6 @@ function debounce(func, wait) {
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
-}
-
-// Apply debouncing to scroll events
-const debouncedScrollHandler = debounce(function() {
-    // Existing scroll logic here
-}, 10);
-
-// Add easter egg - Konami code
-let konamiCode = [];
-const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
-
-document.addEventListener('keydown', function(e) {
-    konamiCode.push(e.code);
-    
-    if (konamiCode.length > konamiSequence.length) {
-        konamiCode.shift();
-    }
-    
-    if (JSON.stringify(konamiCode) === JSON.stringify(konamiSequence)) {
-        // Easter egg: Add rainbow effect
-        document.body.style.animation = 'rainbow 2s infinite';
-        
-        const rainbowStyle = document.createElement('style');
-        rainbowStyle.textContent = `
-            @keyframes rainbow {
-                0% { filter: hue-rotate(0deg); }
-                100% { filter: hue-rotate(360deg); }
-            }
-        `;
-        document.head.appendChild(rainbowStyle);
-        
-        setTimeout(() => {
-            document.body.style.animation = '';
-            rainbowStyle.remove();
-        }, 4000);
-        
-        konamiCode = [];
-    }
-});
-
-const modal = document.getElementById('welcome-modal');
-const span = document.getElementsByClassName('close')[0];
-
-// Show welcome modal
-window.addEventListener('load', function() {
-    setTimeout(() => {
-        modal.style.display = 'block';
-    }, 1000);
-});
-
-span.onclick = function() {
-    modal.style.display = 'none';
-};
-
-window.onclick = function(event) {
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-};
-
-// Error handling for failed animations
-try {
-    // All animation and interaction code
-} catch (error) {
-    console.warn('Some animations may not work properly:', error);
 }
 
 // Console greeting
