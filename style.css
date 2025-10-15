@@ -308,30 +308,30 @@ section {
 }
 
 /* About Section */
-.profile {
+.about {
     background: var(--bg-light);
 }
 
-.profile-content {
+.about-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 4rem;
     align-items: start;
 }
 
-.profile-text p {
+.about-text p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
     line-height: 1.8;
     text-align: justify;
 }
 
-.profile-text strong {
+.about-text strong {
     color: var(--primary-color);
     font-weight: 600;
 }
 
-.profile-stats {
+.about-stats {
     display: flex;
     flex-direction: column;
     gap: 2rem;
