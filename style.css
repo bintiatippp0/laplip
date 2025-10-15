@@ -14,7 +14,7 @@
     --transition: all 0.3s ease;
 }
 
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -34,6 +34,7 @@ body {
     padding: 0 20px;
 }
 
+/* Navigation */
 .navbar {
     position: fixed;
     top: 0;
@@ -112,6 +113,7 @@ body {
     border-radius: 2px;
 }
 
+/* Hero Section */
 .hero {
     min-height: 100vh;
     background: linear-gradient(135deg, #fef5f8 0%, #fff0f5 50%, #f8f0ff 100%);
@@ -281,6 +283,7 @@ body {
     color: var(--text-white);
 }
 
+/* Section Styles */
 section {
     padding: 80px 0;
 }
